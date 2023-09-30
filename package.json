@@ -1,0 +1,14 @@
+{
+  "name": "readmegenerator",
+  "version": "1.0.0",
+  "description": "node_modules/",
+  "main": "sctipt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
