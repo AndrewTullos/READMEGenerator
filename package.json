@@ -1,14 +1,14 @@
 {
-  "name": "readmegenerator",
+  "name": "static-site",
   "version": "1.0.0",
-  "description": "node_modules/ .DS_Store/",
-  "main": "sctipt.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^6.3.1"
   }
 }
