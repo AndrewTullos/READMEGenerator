@@ -18,7 +18,7 @@ const inquirer = require('inquirer');
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// // TODO: Create an array of questions for user input
+// // // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -78,27 +78,32 @@ const questions = [
     },
 ];
 
-// // TODO: Create a function to write README file
+
+console.log("Hello, World!");
+
+// // // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    inquirer.prompt([
-        /* Pass your questions in here */
-        prompt(questions).then()
-])
-    .then((answers) => {
-    // Use user feedback for... whatever!!
-})
+    inquirer.prompt(questions).then(answers => {
+            console.log(answers)
+        })
+
     .catch((error) => {
         if (error.isTtyError) {
-        // Prompt couldn't be rendered in the current environment
+            console.log ("Prompt couldn't be rendered in the current environment")
     }   else {
-        // Something else went wrong
+        console.log('Something else went wrong')
     }
     });
 }
+
+writeToFile();
+
 
 // // TODO: Create a function to initialize app
 // function init() {}
 
 // // Function call to initialize app
 // init();
-console.log(process.argv);
+// console.log(process.argv);
+
+
