@@ -22,6 +22,7 @@ function generateMarkdown(data) {
 
   ## Description
   ${data.description}
+  
   ${renderLicenseBadge(data.license)}
   
   ## Motivation
