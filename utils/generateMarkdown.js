@@ -49,10 +49,12 @@ function generateMarkdown(data) {
   ## Testing
   ${data.test}
   
-  ### Questions - Ask me anything:
+  ## Questions 
+  ### Ask me anything:
   If you hae any questions in regards to this application please follow my Github or reach out via my email address.
   
   ${data.email}
+
   [Github: ${data.github}](https://github.com/${data.github})
   `;
 }
