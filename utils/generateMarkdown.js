@@ -19,30 +19,40 @@ function renderLicenseBadge(license) {
 function generateMarkdown(data) {
   return `
   # ${data.title}
+
   ## Description
   ${data.description}
   ${renderLicenseBadge(data.license)}
+  
   ## Motivation
   ${data.motivation}
+
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
   - [Questions](#questions)
+  
   ## Installation
   ${data.install}
+  
   ## Usage
   ${data.usage}
+  
   ## Credits
   ${data.credit}
+  
   ## Licenses
   This license is covered under the ${data.license}.
+  
   ## Testing
   ${data.test}
+  
   ### Questions - Ask me anything:
-  If you hae any questions in regards to this application please follow my Github or reach out via my email address
-  [Email Address: ](${data.email})
+  If you hae any questions in regards to this application please follow my Github or reach out via my email address.
+  
+  ${data.email}
   [Github(${data.github})](https://github.com/${data.github})
   `;
 }
