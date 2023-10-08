@@ -31,7 +31,7 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
-  - [License](#license)
+  - [License](#licenses)
   - [Questions](#questions)
   
   ## Installation
@@ -53,7 +53,7 @@ function generateMarkdown(data) {
   If you hae any questions in regards to this application please follow my Github or reach out via my email address.
   
   ${data.email}
-  [Github(${data.github})](https://github.com/${data.github})
+  [Github: ${data.github}](https://github.com/${data.github})
   `;
 }
 
