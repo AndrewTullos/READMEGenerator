@@ -56,54 +56,42 @@ const questions = [
         message: 'List out any contributors and source material.',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'What license are you using?',
+        choices: ["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "none"],
     },
     {
         type: 'input',
-        name: 'why',
-        message: 'Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")',
-    },
-    {
-        type: 'input',
-        name: 'badges',
-        default: 'jsBadge',
-        message: 'Please list any badges to contribute. (Will default to Javascript badge)',
-    },
-    {
-        type: 'input',
-        name: 'learn',
-        message: 'What did you learn?',
+        name: 'test',
+        message: 'Describe your testing?',
     },
 ];
 
+// console.log("Hello, World!");
 
-console.log("Hello, World!");
 
 // // // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    inquirer.prompt(questions).then(answers => {
-            console.log(answers)
-        })
-
-    .catch((error) => {
-        if (error.isTtyError) {
-            console.log ("Prompt couldn't be rendered in the current environment")
-    }   else {
-        console.log('Something else went wrong')
-    }
-    });
-}
-
-writeToFile();
-
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+        }
 
 // // TODO: Create a function to initialize app
-// function init() {}
+function init() {
+    // Create a README inside of folder 'dist'
+    fs.mkdir('dist', (err) => {
+        if (err) throw err;
 
-// // Function call to initialize app
-// init();
-// console.log(process.argv);
+        // // After the directory is created, write to a README file inside it
+        // fs.writeFile('./dist/README.md', 'README init.', (err) => {
+        // if (err) throw err;
+        // });
+    });
 
+    inquirer.prompt(questions).then((answers) => {
+    console.log("Creating your professional README.md file. Please allow for 3-4  minutes to generate");
+    writeToFile("./dist/README.md", generateMarkdown({ ...answers }));
+    });
+}
+init();
 
